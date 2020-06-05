@@ -7,6 +7,7 @@ module.exports = {
       screens: {
         '700px': '700px',
         '768px': '768px',
+        '850px': '850px',
         '1024px': '1024px',
         '1440px': '1440px'
       },
@@ -20,6 +21,7 @@ module.exports = {
       width: {
         '30%': '30%',
         '32%': '32%',
+        '45%': '45%',
         '48%': '48%',
         '88%': '88%',
         '18rem': '18rem',
@@ -31,6 +33,8 @@ module.exports = {
       },
       maxWidth: {
         '20rem': '20rem',
+        '22rem': '22rem',
+        '24rem': '24rem',
         '28rem': '28rem',
         '32rem': '32rem',
         '48rem': '49rem',
