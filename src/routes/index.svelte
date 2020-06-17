@@ -110,27 +110,37 @@ import { fly } from 'svelte/transition';
 
 let header;
 let serviceOptions;
-let redundant
-let child = document.querySelectorAll('.child');
+let packageOptions;
+let redundant;
+let reviewContainer;
 let options = {
-
+  threshold: 0.3
 }
 
 onMount(() => {
   header = true;
-  serviceOptions = true;
+  let child = document.querySelectorAll('section');
   
   let observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-      if(entry.isIntersecting) {
-        console.log('boop');
+      if(entry.isIntersecting && entry.target.classList.contains('services')) {
+        serviceOptions = true;
+      }
+      if(entry.isIntersecting && entry.target.classList.contains('redundant')) {
+        redundant = true;
+      }
+      if(entry.isIntersecting && entry.target.classList.contains('packages')) {
+        packageOptions = true;
+      }
+      if(entry.isIntersecting && entry.target.classList.contains('reviews')) {
+        reviewContainer = true;
       }
     })
   }, options)
 
   child.forEach(item => {
     observer.observe(item)
-  })
+  })  
 })
 </script>
 
@@ -138,18 +148,20 @@ onMount(() => {
   <title>Hosting Solutions | Home</title>
 </svelte:head>
 
+<section class="my-10 mb-20 h-full 768px:mt-20 768px:mb-40">
 {#if header}
-  <div class="header my-10 w-4/5 mx-auto mb-20 768px:flex flex-wrap justify-between items-center 768px:mt-20 768px:mb-40">
-    <img class="w-4/5 mx-auto my-8 768px:w-45% 768px:order-last" src="images/header-img.png" alt="" transition:fly={{ x: 300, duration: 600 }}>
-    <div class="768px:w-45%" transition:fly={{ x: -300, delay: 200, duration: 600 }}>
+  <div class="w-4/5 mx-auto 768px:flex flex-wrap justify-between items-center">
+    <img class="w-4/5 mx-auto my-8 768px:w-45% 768px:order-last" src="images/header-img.png" alt="" transition:fly={{ x: 300, duration: 500 }}>
+    <div class="768px:w-45%" transition:fly={{ x: -300, delay: 150, duration: 500 }}>
       <h2 class="uppercase text-2xl text-primary font-bold mt-12">Hosting made simple</h2>
       <p class="text-secondary py-4 mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque dolores ratione nam corporis suscipit ex eligendi amet, dolor omnis aspernatur consectetur, repellendus voluptas laborum tempora quo quam quod nobis accusantium.</p>
       <button class="bg-primary py-2 w-40 text-white text-lg rounded-md shadow-md font-semibold hover:opacity-75">Learn More</button>
     </div>
-</div>
-{/if}
+  </div>
+  {/if}
+</section>
 
-<div class="py-56 my-6 relative 768px:py-32" style="background-image: url('images/wave-tablet.png'); background-repeat: no-repeat; background-size: cover;">
+<section class="services py-56 my-6 relative 768px:py-32" style="background-image: url('images/wave-tablet.png'); background-repeat: no-repeat; background-size: cover;">
   {#if serviceOptions}
     <div class="768px:w-4/5 768px:mx-auto 768px:flex flex-wrap justify-between items-center" transition:fly={{ y: 300, duration: 500}}>
       {#each services as service}
@@ -164,9 +176,9 @@ onMount(() => {
       {/each}
     </div>
   {/if}
-</div>
+</section>
 
-<div class="child redundant w-4/5 mx-auto py-32 mb-24 768px:flex flex-wrap justify-between items-center">
+<section class="redundant w-4/5 mx-auto py-32 mb-24 768px:flex flex-wrap justify-between items-center">
   {#if redundant}
     <div class="768px:w-45%" transition:fly={{ x: -300, delay: 200, duration: 600 }}>
       <h2 class="text-2xl font-bold text-secondary">Redundant <span class="text-primary">Infrastructure</span></h2>
@@ -174,43 +186,46 @@ onMount(() => {
     </div>
     <img class="mt-16 768px:w-45%" src="images/about.svg" alt="" transition:fly={{ x: 300, duration: 600 }}>
   {/if}
-</div>
+</section>
 
-<div class="bg-primary py-32 text-center">
-  <div class="w-4/5 mx-auto">
-    <div class="w-4/5 mx-auto mb-12 text-white">
-      <h3 class="text-2xl font-semibold">Choose a package</h3>
-      <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, illo! Dolorem corporis enim sint nisi iure consectetur.</p>
-    </div>
-    <div class="768px:flex flex-wrap">
-      {#each packages as item}
-        <div class={`py-8 w-full mx-auto rounded-lg border-2 border-gray-600 mb-4 max-w-20rem ${item.main ? 'bg-white' : 'bg-duckegg'}`}>
-          <div class="w-4/5 mx-auto">
-            <h3 class="text-2xl font-semibold text-secondary">{item.title}</h3>
-            <p class="text-3xl my-2 font-semibold">{item.price}</p>
-            <hr class="w-4/5 mx-auto">
-            <ul class="py-6 w-4/5 mx-auto">
-              {#each item.options as option}
-                <li class="flex items-center w-full mb-2"><img class="w-4 mr-2" src={option.access ? 'icons/tick.svg' : 'icons/cross.svg'} alt="">{option.name}</li>
-              {/each}
-            <button class="bg-primary py-2 w-32 text-white rounded-md shadow-md font-semibold my-6">Purchase</button>
+<section class="packages bg-primary py-32 text-center">
+  {#if packageOptions}
+    <div class="w-4/5 mx-auto" transition:fly={{y: 200, duration: 500}}>
+      <div class="w-4/5 mx-auto mb-12 text-white">
+        <h3 class="text-2xl font-semibold">Choose a package</h3>
+        <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, illo! Dolorem corporis enim sint nisi iure consectetur.</p>
+      </div>
+      <div class="768px:flex flex-wrap">
+        {#each packages as item}
+          <div class={`py-8 w-full mx-auto rounded-lg border-2 border-gray-600 mb-4 max-w-20rem ${item.main ? 'bg-white' : 'bg-duckegg'}`}  transition:fly={{ y: 300, duration: 500, delay: 300}}>
+            <div class="w-4/5 mx-auto">
+              <h3 class="text-2xl font-semibold text-secondary">{item.title}</h3>
+              <p class="text-3xl my-2 font-semibold">{item.price}</p>
+              <hr class="w-4/5 mx-auto">
+              <ul class="py-6 w-4/5 mx-auto">
+                {#each item.options as option}
+                  <li class="flex items-center w-full mb-2"><img class="w-4 mr-2" src={option.access ? 'icons/tick.svg' : 'icons/cross.svg'} alt="">{option.name}</li>
+                {/each}
+              <button class="bg-primary py-2 w-32 text-white rounded-md shadow-md font-semibold my-6">Purchase</button>
+            </div>
           </div>
-        </div>
-      {/each}
+        {/each}
+      </div>
     </div>
-  </div>
-</div>
+  {/if}
+</section>
 
-<div class="py-24" style="background-image: url('images/reviews-mobile.png');">
+<section class="reviews py-24" style="background-image: url('images/reviews-mobile.png');">
+  {#if reviewContainer}
   <div class="w-4/5 mx-auto 768px:flex flex-wrap">
     <div>
-      <div class="text-center">
+      <div class="text-center" transition:fly={{ y: 200, duration: 500}}>
         <h2 class="text-2xl font-semibold">Customer Reviews</h2>
         <p class="py-3 w-3/4 mx-auto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta nemo ad corporis.</p>
       </div>
       <div class="my-16 768px:my-10 768px:flex flex-wrap justify-between">
         {#each reviews as review}
-          <div class="bg-white rounded-lg border border-gray-400 my-16 mx-auto 768px:w-30% 768px:my-4">
+          <div class="bg-white rounded-lg border border-gray-400 my-16 mx-auto 768px:w-30% 768px:my-4" transition:fly={{ y: 200, duration: 500,delay: 300}}>
             <div class="flex justify-center items-center mb-5 bg-primary py-3">
               {#each review.rating as _, i}
                 <img class="w-6 mx-1" src="icons/star.svg" alt="">
@@ -225,4 +240,5 @@ onMount(() => {
       </div>
     </div>
   </div>
-</div>
+  {/if}
+</section>

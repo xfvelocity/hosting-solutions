@@ -14,18 +14,18 @@
     "build:tailwind": "cross-env NODE_ENV=production postcss static/tailwind.css -o static/index.css"
   },
   "dependencies": {
-    "@beyonk/svelte-carousel": "^2.5.0",
-    "@fullhuman/postcss-purgecss": "^2.2.0",
+    "@beyonk/svelte-carousel": "^2.6.1",
+    "@fullhuman/postcss-purgecss": "^2.3.0",
     "compression": "^1.7.4",
     "cross-env": "^7.0.2",
     "cssnano": "^4.1.10",
     "httpie": "^2.0.0-next.2",
-    "npm-check-updates": "^6.0.1",
+    "npm-check-updates": "^7.0.1",
     "polka": "next",
     "postcss-cli": "^7.1.1",
     "rollup-plugin-buble": "^0.19.8",
     "rollup-plugin-root-import": "^1.0.0",
-    "sirv": "^0.4.6",
+    "sirv": "^1.0.0",
     "tailwindcss": "^1.4.6",
     "tiny-slider": "^2.9.2",
     "ua-parser-js": "^0.7.21"
@@ -36,16 +36,16 @@
     "@babel/plugin-transform-runtime": "^7.10.1",
     "@babel/preset-env": "^7.10.2",
     "@babel/runtime": "^7.10.2",
-    "@rollup/plugin-json": "^4.0.3",
+    "@rollup/plugin-json": "^4.1.0",
     "npm-run-all": "^4.1.5",
-    "rollup": "^2.12.0",
+    "rollup": "^2.16.1",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-replace": "^2.2.0",
-    "rollup-plugin-svelte": "^5.2.2",
+    "rollup-plugin-svelte": "^5.2.3",
     "rollup-plugin-terser": "^6.1.0",
-    "sapper": "^0.27.13",
-    "svelte": "^3.23.0"
+    "sapper": "^0.27.16",
+    "svelte": "^3.23.2"
   }
 }
