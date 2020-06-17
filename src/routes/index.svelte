@@ -104,42 +104,76 @@ let reviews = [
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias porro saepe quis veritatis tenetur sequi deserunt dicta'
   }
 ]
+
+import { onMount } from 'svelte';
+import { fly } from 'svelte/transition';
+
+let header;
+let serviceOptions;
+let redundant
+let child = document.querySelectorAll('.child');
+let options = {
+
+}
+
+onMount(() => {
+  header = true;
+  serviceOptions = true;
+  
+  let observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        console.log('boop');
+      }
+    })
+  }, options)
+
+  child.forEach(item => {
+    observer.observe(item)
+  })
+})
 </script>
 
 <svelte:head>
   <title>Hosting Solutions | Home</title>
 </svelte:head>
 
-<div class="my-10 w-4/5 mx-auto mb-20 768px:flex flex-wrap justify-between items-center 768px:mt-16 768px:mb-40">
-  <img class="w-4/5 mx-auto my-8 768px:w-45% 768px:order-last" src="images/header-img.png" alt="">
-  <div class="768px:w-45%">
-    <h2 class="uppercase text-2xl text-primary font-bold mt-12">Hosting made simple</h2>
-    <p class="text-secondary py-4 mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque dolores ratione nam corporis suscipit ex eligendi amet, dolor omnis aspernatur consectetur, repellendus voluptas laborum tempora quo quam quod nobis accusantium.</p>
-    <button class="bg-primary py-2 w-40 text-white text-lg rounded-md shadow-md font-semibold hover:opacity-75">Learn More</button>
-  </div>
+{#if header}
+  <div class="header my-10 w-4/5 mx-auto mb-20 768px:flex flex-wrap justify-between items-center 768px:mt-20 768px:mb-40">
+    <img class="w-4/5 mx-auto my-8 768px:w-45% 768px:order-last" src="images/header-img.png" alt="" transition:fly={{ x: 300, duration: 600 }}>
+    <div class="768px:w-45%" transition:fly={{ x: -300, delay: 200, duration: 600 }}>
+      <h2 class="uppercase text-2xl text-primary font-bold mt-12">Hosting made simple</h2>
+      <p class="text-secondary py-4 mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque dolores ratione nam corporis suscipit ex eligendi amet, dolor omnis aspernatur consectetur, repellendus voluptas laborum tempora quo quam quod nobis accusantium.</p>
+      <button class="bg-primary py-2 w-40 text-white text-lg rounded-md shadow-md font-semibold hover:opacity-75">Learn More</button>
+    </div>
 </div>
+{/if}
 
 <div class="py-56 my-6 relative 768px:py-32" style="background-image: url('images/wave-tablet.png'); background-repeat: no-repeat; background-size: cover;">
-  <div class="768px:w-4/5 768px:mx-auto 768px:flex flex-wrap justify-between items-center">
-    {#each services as service}
-      <div class={`w-4/5 mx-auto ${service.className ? service.className : ''}`}>
-        <div class="flex items-center">
-          <img class="w-8 mr-3" src={service.img} alt="">
-          <h3 class="text-2xl font-semibold text-white">{service.title}</h3>
+  {#if serviceOptions}
+    <div class="768px:w-4/5 768px:mx-auto 768px:flex flex-wrap justify-between items-center" transition:fly={{ y: 300, duration: 500}}>
+      {#each services as service}
+        <div class={`w-4/5 mx-auto ${service.className ? service.className : ''}`}>
+          <div class="flex items-center">
+            <img class="w-8 mr-3" src={service.img} alt="">
+            <h3 class="text-2xl font-semibold text-white">{service.title}</h3>
+          </div>
+          <p class="py-5 text-white">{service.desc}</p>
+          <a class="flex items-center text-bright-primary hover:opacity-75" href="/">Learn more <img class="ml-2 w-4" src="icons/arrow.svg" alt=""></a>
         </div>
-        <p class="py-5 text-white">{service.desc}</p>
-        <a class="flex items-center text-bright-primary hover:opacity-75" href="/">Learn more <img class="ml-2 w-4" src="icons/arrow.svg" alt=""></a>
-      </div>
-    {/each}
-  </div>
+      {/each}
+    </div>
+  {/if}
 </div>
 
-<div class="w-4/5 mx-auto py-32 mb-24 768px:flex flex-wrap justify-between items-center">
-  <div class="768px:w-45%">
-    <h2 class="text-2xl font-bold text-secondary">Redundant <span class="text-primary">Infrastructure</span></h2>
-    <p class="py-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis veniam atque neque vero. Vero odio, assumenda quaerat tempora sequi adipisci distinctio maiores in provident dignissimos animi, tempore excepturi illo perferendis!</p>
-  </div>
-  <img class="mt-16 768px:w-45%" src="images/about.svg" alt="">
+<div class="child redundant w-4/5 mx-auto py-32 mb-24 768px:flex flex-wrap justify-between items-center">
+  {#if redundant}
+    <div class="768px:w-45%" transition:fly={{ x: -300, delay: 200, duration: 600 }}>
+      <h2 class="text-2xl font-bold text-secondary">Redundant <span class="text-primary">Infrastructure</span></h2>
+      <p class="py-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis veniam atque neque vero. Vero odio, assumenda quaerat tempora sequi adipisci distinctio maiores in provident dignissimos animi, tempore excepturi illo perferendis!</p>
+    </div>
+    <img class="mt-16 768px:w-45%" src="images/about.svg" alt="" transition:fly={{ x: 300, duration: 600 }}>
+  {/if}
 </div>
 
 <div class="bg-primary py-32 text-center">
@@ -150,7 +184,7 @@ let reviews = [
     </div>
     <div class="768px:flex flex-wrap">
       {#each packages as item}
-        <div class={`py-8 w-full mx-auto rounded-lg border-2 border-gray-600 max-w-20rem mb-4 ${item.main ? 'bg-white' : 'bg-duckegg'}`}>
+        <div class={`py-8 w-full mx-auto rounded-lg border-2 border-gray-600 mb-4 max-w-20rem ${item.main ? 'bg-white' : 'bg-duckegg'}`}>
           <div class="w-4/5 mx-auto">
             <h3 class="text-2xl font-semibold text-secondary">{item.title}</h3>
             <p class="text-3xl my-2 font-semibold">{item.price}</p>
