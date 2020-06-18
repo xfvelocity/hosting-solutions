@@ -4,19 +4,19 @@ let services = [
     title: 'High Performance',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate earum consectetur rerum iusto voluptas sapiente ut optio fugiat maiores! Ex sit neque in vero beatae cum porro assumenda at officiis',
     img: 'icons/rocket.svg',
-    className: '768px:w-45% 768px:mx-0'
+    className: '768px:w-45% 768px:mx-0 1024px:w-30%'
   },
     {
     title: 'Fully Redundant',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate earum consectetur rerum iusto voluptas sapiente ut optio fugiat maiores! Ex sit neque in vero beatae cum porro assumenda at officiis',
     img: 'icons/cloud.svg',
-    className: 'my-24 768px:w-45% 768px:mx-0'
+    className: 'my-24 768px:w-45% 768px:mx-0 1024px:w-30%'
   },
     {
     title: 'Secure Infrastructure',
     desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate earum consectetur rerum iusto voluptas sapiente ut optio fugiat maiores! Ex sit neque in vero beatae cum porro assumenda at officiis',
     img: 'icons/shield.svg',
-    className: '768px:w-full'
+    className: '768px:w-full 1024px:w-30% 1024px:mx-0'
   }
 ]
 
@@ -106,9 +106,10 @@ let reviews = [
 ]
 
 import { onMount } from 'svelte';
-import { fly } from 'svelte/transition';
+import { fly, fade } from 'svelte/transition';
 
 let header;
+header = true;
 let serviceOptions;
 let packageOptions;
 let redundant;
@@ -118,7 +119,7 @@ let options = {
 }
 
 onMount(() => {
-  header = true;
+  
   let child = document.querySelectorAll('section');
   
   let observer = new IntersectionObserver((entries, observer) => {
@@ -150,7 +151,7 @@ onMount(() => {
 
 <section class="my-10 mb-20 h-full 768px:mt-20 768px:mb-40">
 {#if header}
-  <div class="w-4/5 mx-auto 768px:flex flex-wrap justify-between items-center">
+  <div class="w-4/5 mx-auto 768px:flex flex-wrap justify-between items-center 1024px:max-w-48rem">
     <img class="w-4/5 mx-auto my-8 768px:w-45% 768px:order-last" src="images/header-img.png" alt="" transition:fly={{ x: 300, duration: 500 }}>
     <div class="768px:w-45%" transition:fly={{ x: -300, delay: 150, duration: 500 }}>
       <h2 class="uppercase text-2xl text-primary font-bold mt-12">Hosting made simple</h2>
@@ -161,9 +162,9 @@ onMount(() => {
   {/if}
 </section>
 
-<section class="services py-56 my-6 relative 768px:py-32" style="background-image: url('images/wave-tablet.png'); background-repeat: no-repeat; background-size: cover;">
+<section class="services py-56 my-6 relative 768px:py-32" style="background-image: url('images/wave.svg'); background-repeat: no-repeat; background-size: cover;">
   {#if serviceOptions}
-    <div class="768px:w-4/5 768px:mx-auto 768px:flex flex-wrap justify-between items-center" transition:fly={{ y: 300, duration: 500}}>
+    <div class="768px:w-4/5 768px:mx-auto 768px:flex flex-wrap justify-between items-center 1024px:max-w-48rem" transition:fly={{ y: 300, duration: 500}}>
       {#each services as service}
         <div class={`w-4/5 mx-auto ${service.className ? service.className : ''}`}>
           <div class="flex items-center">
@@ -178,7 +179,7 @@ onMount(() => {
   {/if}
 </section>
 
-<section class="redundant w-4/5 mx-auto py-32 mb-24 768px:flex flex-wrap justify-between items-center">
+<section class="redundant w-4/5 mx-auto py-32 mb-24 768px:flex flex-wrap justify-between items-center 1024px:max-w-48rem">
   {#if redundant}
     <div class="768px:w-45%" transition:fly={{ x: -300, delay: 200, duration: 600 }}>
       <h2 class="text-2xl font-bold text-secondary">Redundant <span class="text-primary">Infrastructure</span></h2>
@@ -190,14 +191,14 @@ onMount(() => {
 
 <section class="packages bg-primary py-32 text-center">
   {#if packageOptions}
-    <div class="w-4/5 mx-auto" transition:fly={{y: 200, duration: 500}}>
-      <div class="w-4/5 mx-auto mb-12 text-white">
+    <div class="w-4/5 mx-auto 1024px:max-w-48rem" >
+      <div class="w-4/5 mx-auto mb-12 text-white 1024px:mb-20" transition:fly={{x: -300, duration: 500}}>
         <h3 class="text-2xl font-semibold">Choose a package</h3>
         <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, illo! Dolorem corporis enim sint nisi iure consectetur.</p>
       </div>
-      <div class="768px:flex flex-wrap">
+      <div class="768px:flex flex-wrap justify-between items-center">
         {#each packages as item}
-          <div class={`py-8 w-full mx-auto rounded-lg border-2 border-gray-600 mb-4 max-w-20rem ${item.main ? 'bg-white' : 'bg-duckegg'}`}  transition:fly={{ y: 300, duration: 500, delay: 300}}>
+          <div class={`py-6 w-full mx-auto rounded-lg border-2 border-gray-600 mb-4 max-w-20rem 1024px:w-1/3 1024px:mx-0 ${item.main ? 'bg-white z-50 1024px:absolute 1024px:py-12' : 'bg-duckegg 1024px:relative'}`} style={item.main ? 'left: 39vw;' : ''} transition:fly={{ y: 300, duration: 400, delay: 200}}>
             <div class="w-4/5 mx-auto">
               <h3 class="text-2xl font-semibold text-secondary">{item.title}</h3>
               <p class="text-3xl my-2 font-semibold">{item.price}</p>
@@ -206,7 +207,7 @@ onMount(() => {
                 {#each item.options as option}
                   <li class="flex items-center w-full mb-2"><img class="w-4 mr-2" src={option.access ? 'icons/tick.svg' : 'icons/cross.svg'} alt="">{option.name}</li>
                 {/each}
-              <button class="bg-primary py-2 w-32 text-white rounded-md shadow-md font-semibold my-6">Purchase</button>
+              <button class="bg-primary py-2 w-32 text-white rounded-md shadow-md font-semibold my-6 hover:opacity-75">Purchase</button>
             </div>
           </div>
         {/each}
@@ -217,15 +218,15 @@ onMount(() => {
 
 <section class="reviews py-24" style="background-image: url('images/reviews-mobile.png');">
   {#if reviewContainer}
-  <div class="w-4/5 mx-auto 768px:flex flex-wrap">
+  <div class="w-4/5 mx-auto 768px:flex flex-wrap 1024px:max-w-48rem">
     <div>
-      <div class="text-center" transition:fly={{ y: 200, duration: 500}}>
+      <div class="text-center" transition:fly={{ x: 300, duration: 500}}>
         <h2 class="text-2xl font-semibold">Customer Reviews</h2>
         <p class="py-3 w-3/4 mx-auto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta nemo ad corporis.</p>
       </div>
       <div class="my-16 768px:my-10 768px:flex flex-wrap justify-between">
         {#each reviews as review}
-          <div class="bg-white rounded-lg border border-gray-400 my-16 mx-auto 768px:w-30% 768px:my-4" transition:fly={{ y: 200, duration: 500,delay: 300}}>
+          <div class="bg-white rounded-lg border border-gray-400 my-16 mx-auto 768px:w-30% 768px:my-4" transition:fly={{ y: 300, duration: 500, delay: 200}}>
             <div class="flex justify-center items-center mb-5 bg-primary py-3">
               {#each review.rating as _, i}
                 <img class="w-6 mx-1" src="icons/star.svg" alt="">
