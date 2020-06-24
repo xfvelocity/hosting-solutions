@@ -147,9 +147,10 @@ onMount(() => {
 
 <svelte:head>
   <title>Hosting Solutions | Home</title>
+  <meta name="description" content="Hosting Solutions, the simplest solution for hosting your web server.">
 </svelte:head>
 
-<section class="my-10 mb-20 h-full 768px:mt-20 768px:mb-40">
+<section class="mt-20 mb-10 h-full 768px:mt-20 768px:mb-40">
 {#if header}
   <div class="w-4/5 mx-auto 768px:flex flex-wrap justify-between items-center 1024px:max-w-48rem">
     <img class="w-4/5 mx-auto my-8 768px:w-45% 768px:order-last" src="images/header-img.png" alt="" transition:fly={{ x: 300, duration: 500 }}>
@@ -216,7 +217,7 @@ onMount(() => {
   {/if}
 </section>
 
-<section class="reviews py-24" style="background-image: url('images/reviews-mobile.png');">
+<section class="reviews py-24" style="background-image: url('images/reviews.svg'); background-repeat: no-repeat; background-size: cover;">
   {#if reviewContainer}
   <div class="w-4/5 mx-auto 768px:flex flex-wrap 1024px:max-w-48rem">
     <div>
