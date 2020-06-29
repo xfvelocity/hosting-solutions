@@ -14,17 +14,17 @@ import { fly } from 'svelte/transition';
     <div class="1024px:flex items-center 1024px:w-4/5 1024px:mx-auto">
         <div class="rounded-sm bg-white w-4/5 mx-auto my-8 flex flex-wrap py-8 justify-center shadow-md border-gray-300 border 768px:max-w-32rem" transition:fly={{ y: 300, duration: 500 }}>
             <form class="w-full">
-                <div class="mb-3 flex flex-wrap items-center w-10/12 mx-auto">
+                <div class="mb-3 flex flex-wrap items-center w-10/12 mx-auto 1024px:w-3/4">
                     <label class="font-semibold mb-2 w-full" for="name">First Name</label>
                     <input class="bg-gray-200 pl-3 py-1 rounded-sm w-full" name="name" type="text" placeholder="John">
                 </div>
                 <br>
-                <div class="mb-3 flex flex-wrap items-center w-10/12 mx-auto">
+                <div class="mb-3 flex flex-wrap items-center w-10/12 mx-auto 1024px:w-3/4">
                     <label class="font-semibold w-full mb-2" for="name">Email Address</label>
                     <input class="bg-gray-200 pl-3 py-1 rounded-sm w-full" name="email" type="text" placeholder="john@gmail.com">
                 </div>
                 <br>
-                <div class="mb-3 flex flex-wrap items-center w-10/12 mx-auto">
+                <div class="mb-3 flex flex-wrap items-center w-10/12 mx-auto 1024px:w-3/4">
                     <label class="font-semibold w-full mb-2" for="subject">Subject</label>
                     <select class="bg-gray-200 pl-3 py-1 rounded-sm w-full" name="subject">
                         <option value="placeholder" selected disabled>Choose an option..</option>
@@ -35,12 +35,12 @@ import { fly } from 'svelte/transition';
                     </select>
                 </div>
                 <br>
-                <div class="mb-1 flex flex-wrap w-10/12 mx-auto">
+                <div class="mb-1 flex flex-wrap w-10/12 mx-auto 1024px:w-3/4">
                     <label class="pt-1 font-semibold w-full mb-2" for="message">Message</label>
                     <textarea class="mb-3 bg-gray-200 pl-3 py-1 rounded-sm w-full h-24" name="message" placeholder="How can we help?"></textarea>
                 </div>
                 <br>
-                <div class="flex justify-end w-10/12 mx-auto">
+                <div class="flex justify-end w-10/12 mx-auto 1024px:w-3/4">
                     <button class="bg-primary text-white py-2 w-32 rounded-sm hover:opacity-75" type="submit">Submit</button>
                 </div>
             </form>

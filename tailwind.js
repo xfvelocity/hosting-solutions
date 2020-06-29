@@ -16,7 +16,8 @@ module.exports = {
         'primary': '#006572',
         'secondary': '#3E3E3E',
         'bright-primary': '#00FFF0',
-        'dark-primary': '#003b42'
+        'dark-primary': '#003b42',
+        'darkest-primary': '#001f23'
       },
       width: {
         '30%': '30%',
@@ -41,6 +42,7 @@ module.exports = {
         '48rem': '49rem',
         '53rem': '53rem',
         '62rem': '62rem',
+        '64rem': '64rem',
         '68rem': '68rem'
       },
       boxShadow: {
