@@ -887,13 +887,6 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@beyonk/svelte-carousel@^2.6.1":
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/@beyonk/svelte-carousel/-/svelte-carousel-2.6.1.tgz#834ed3ba26e8a3f988e8bb963c5b26ba867b77d8"
-  integrity sha512-buQiWXD+gD8AMtz6swpMQrTqy6T15dTYrHegGtkkbVsIx14w2Rl11ObPptfjCFA1CXLO1KRogQlCaqHYns5Uvw==
-  dependencies:
-    siema "^1.5.1"
-
 "@fullhuman/postcss-purgecss@^2.1.2":
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/@fullhuman/postcss-purgecss/-/postcss-purgecss-2.1.2.tgz#8fe4d4ae2b58214b5452cb490a31c7146517442f"
@@ -2588,11 +2581,6 @@ http-signature@~1.2.0:
     assert-plus "^1.0.0"
     jsprim "^1.2.2"
     sshpk "^1.7.0"
-
-httpie@^2.0.0-next.2:
-  version "2.0.0-next.7"
-  resolved "https://registry.yarnpkg.com/httpie/-/httpie-2.0.0-next.7.tgz#32f7963e4adf12b2c43ec0ab94c57576e970d6f5"
-  integrity sha512-LsfblquX/0FTF1k3qy3VtCfHcOOpQlhEkPRy1KO99yon20HGw2NUtsx4s1+RSwYq+lngtmn45eBDBgJ7tSclEQ==
 
 https-proxy-agent@^5.0.0:
   version "5.0.0"
@@ -4824,11 +4812,6 @@ shimport@^1.0.1:
   resolved "https://registry.yarnpkg.com/shimport/-/shimport-1.0.1.tgz#32ea5637e7707fdfa9037516f8c2a97786fc9031"
   integrity sha512-Imf4gH+8WQmT1GvxS/x79qpmfnE6m50hyN1ucatX+7oMCgmaF8obZWCPIzSUe6+P+YmXM46lkP2pxiV2/lt9Og==
 
-siema@^1.5.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/siema/-/siema-1.5.1.tgz#eff312b77e8340fa4d81d5d053ebbeb9113ff888"
-  integrity sha1-7/MSt36DQPpNgdXQU+u+uRE/+Ig=
-
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.3.tgz#a1410c2edd8f077b08b4e253c8eacfcaf057461c"
@@ -5229,11 +5212,6 @@ timsort@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/timsort/-/timsort-0.3.0.tgz#405411a8e7e6339fe64db9a234de11dc31e02bd4"
   integrity sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=
-
-tiny-slider@^2.9.2:
-  version "2.9.2"
-  resolved "https://registry.yarnpkg.com/tiny-slider/-/tiny-slider-2.9.2.tgz#dcd70ac79054a4d170bc2cfde3efbdaa2cc0c75f"
-  integrity sha512-2sgEJpVbpIbbgiYM/xGa0HMvvtUZSJvXeZJmLWBux6VgFqh/MQG8LXBR59ZLYpa/1OtwM0E6/ic55oLOJN9Mnw==
 
 to-fast-properties@^2.0.0:
   version "2.0.0"

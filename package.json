@@ -14,12 +14,10 @@
     "build:tailwind": "cross-env NODE_ENV=production postcss static/tailwind.css -o static/index.css"
   },
   "dependencies": {
-    "@beyonk/svelte-carousel": "^2.6.1",
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "compression": "^1.7.4",
     "cross-env": "^7.0.2",
     "cssnano": "^4.1.10",
-    "httpie": "^2.0.0-next.2",
     "npm-check-updates": "^7.0.1",
     "polka": "next",
     "postcss-cli": "^7.1.1",
@@ -27,7 +25,6 @@
     "rollup-plugin-root-import": "^1.0.0",
     "sirv": "^1.0.0",
     "tailwindcss": "^1.4.6",
-    "tiny-slider": "^2.9.2",
     "ua-parser-js": "^0.7.21"
   },
   "devDependencies": {
