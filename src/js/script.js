@@ -11,15 +11,15 @@ navButton.addEventListener('click', () => {
     } 
 })
 
-const dropdownButton = document.querySelector('.features');
-const dropdown = document.querySelector('.dropdown');
-let dropPressed;
+// const dropdownButton = document.querySelector('.features');
+// const dropdown = document.querySelector('.dropdown');
+// let dropPressed;
 
-dropdownButton.addEventListener('click', () => {
-    dropPressed = !dropPressed;
-    dropdown.classList.remove('drop-pressed');
+// dropdownButton.addEventListener('click', () => {
+//     dropPressed = !dropPressed;
+//     dropdown.classList.remove('drop-pressed');
 
-    if(dropPressed) {
-        dropdown.classList.toggle('drop-pressed');
-    } 
-})
+//     if(dropPressed) {
+//         dropdown.classList.toggle('drop-pressed');
+//     } 
+// })

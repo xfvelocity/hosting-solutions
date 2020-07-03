@@ -22,6 +22,7 @@ nav {
             }
             @media(min-width: 768px) {
                 position: relative;
+                width: auto;
                 img {
                     display: none;
                 }
@@ -33,6 +34,8 @@ nav {
         display: none;
         background: rgb(245, 245, 245);
         padding: 20px 0;
+        position: absolute;
+        width: 100%;
         ul {
             line-height: 2;
             width: 80%;
@@ -43,7 +46,7 @@ nav {
             .features {
                 cursor: pointer;
                 img {
-                    width: .7rem;
+                    width: .6rem;
                 }
                 &:hover {
                     color: $primary;
@@ -59,6 +62,8 @@ nav {
         @media(min-width: 768px) {
             display: block;
             background: none;
+            position: relative;
+            width: auto;
             padding: 0;
             ul {
                 width: 100%;
@@ -67,7 +72,6 @@ nav {
                 line-height: 1.5;
                 li {
                     margin: 0 7px;
-                    font-size: 18px;
                 }
                 .login {
                     background: $primary;
@@ -83,10 +87,6 @@ nav {
                             opacity: .75;
                         }
                     }
-                }
-                .dropdown {
-                    position: absolute;
-
                 }
             }
         }

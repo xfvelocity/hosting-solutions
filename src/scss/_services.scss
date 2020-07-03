@@ -1,0 +1,30 @@
+.services {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    &-item {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 30px 0;
+        max-width: 260px;
+        margin: 0 auto;
+        img {
+            width: 80px;
+        }
+        h3 {
+            width: 100%;
+            text-align: center;
+            margin: 10px 0;
+            color: $primary;
+        }
+        p {
+            text-align: center;
+            font-size: 14px;
+            margin: 0;
+        }
+    }
+}
