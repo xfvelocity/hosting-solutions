@@ -10,7 +10,7 @@ let services = [
     title: 'Fully Redundant',
     desc: 'Our cloud platform offers a 99.99% uptime guarantee with full hardware and network redundancy to keep your services online.',
     img: 'icons/cloud.svg',
-    className: 'my-24 768px:w-45% 768px:mx-0 1024px:w-30%'
+    className: 'my-16 768px:w-45% 768px:mx-0 1024px:w-30%'
   },
     {
     title: 'Secure Infrastructure',
@@ -89,7 +89,7 @@ let packages = [
 
 let reviews = [
   {
-    name: 'Calire Fields',
+    name: 'Claire Fields',
     rating: [1,2,3,4,5],
     desc: 'My customers didn\'t experience a single outage since I moved my services over to HostingSolutions.'
   },
@@ -152,9 +152,9 @@ onMount(() => {
 
 <section class="mt-20 mb-10 h-full 768px:mt-20 768px:mb-40">
 {#if header}
-  <div class="w-4/5 mx-auto text-center 768px:flex flex-wrap justify-between items-center 768px:text-left 1024px:max-w-48rem">
+  <div class="w-4/5 text-center mx-auto 768px:flex flex-wrap justify-between items-center 768px:text-left 1024px:max-w-48rem">
     <img class="w-4/5 mx-auto my-8 768px:w-45% 768px:order-last" src="images/header-img.png" alt="" transition:fly={{ x: 300, duration: 500 }}>
-    <div class="768px:w-45%" transition:fly={{ x: -300, delay: 150, duration: 500 }}>
+    <div class="mx-auto 768px:w-45%" transition:fly={{ x: -300, delay: 150, duration: 500 }}>
       <h2 class="uppercase text-3xl text-primary font-bold mt-12">Hosting made simple</h2>
       <p class="text-secondary mt-4 mb-2">Our Linux based website hosting guarantees lightning-fast loading speeds, unbeatable reliability and state-of-the-art security.</p>
       <p class="text-secondary mb-10"> Add that to our easy-to-use control panel and expert telephone support, and it’s easy to see why we host 1 in 5 of the UK’s active websites. In fact, we have more than 20 years’ experience in helping British businesses succeed online..</p>
@@ -164,17 +164,17 @@ onMount(() => {
   {/if}
 </section>
 
-<section class="services py-24 mt-32 relative bg-primary 768px:py-32">
+<section class="services py-20 mt-32 relative bg-primary 768px:py-32">
   {#if serviceOptions}
     <div class="768px:w-4/5 768px:mx-auto 768px:flex flex-wrap justify-between items-center 1024px:max-w-48rem" transition:fly={{ y: 300, duration: 500}}>
       {#each services as service}
-        <div class={`w-4/5 mx-auto text-center ${service.className ? service.className : ''}`}>
-          <div class="flex items-center justify-center">
+        <div class={`w-4/5 mx-auto text-center 768px:text-left ${service.className ? service.className : ''}`}>
+          <div class="flex items-center justify-center 768px:justify-start">
             <img class="w-8 mr-3" src={service.img} alt="">
             <h3 class="text-2xl font-semibold text-white">{service.title}</h3>
           </div>
-          <p class="py-5 text-white w-10/12 mx-auto">{service.desc}</p>
-          <a class="flex justify-center items-center text-bright-primary hover:opacity-75" href="/">Learn more <img class="ml-2 w-4" src="icons/arrow.svg" alt=""></a>
+          <p class="py-5 text-white w-10/12 mx-auto 768px:mx-0">{service.desc}</p>
+          <a class="flex justify-center items-center text-bright-primary hover:opacity-75 768px:justify-start" href="/">Learn more <img class="ml-2 w-4" src="icons/arrow.svg" alt=""></a>
         </div>
       {/each}
     </div>
