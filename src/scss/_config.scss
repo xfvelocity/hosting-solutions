@@ -1,0 +1,23 @@
+$primary: #006572;
+$secondary: #3E3E3E;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: poppins, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    color: $secondary;
+    text-decoration: none;
+}

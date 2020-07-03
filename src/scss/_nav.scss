@@ -1,0 +1,33 @@
+.navbar {
+    &-contents {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        h1 {
+            color: $secondary;
+            .primary {
+                color: $primary;
+            }
+        }
+
+        img {
+            cursor: pointer;
+            width: 1.5rem;
+        }
+    }
+}
+
+.nav-links {
+    background: rgb(230, 230, 230);
+    padding: 20px 0;
+    ul {
+        line-height: 1.8;
+        width: 80%;
+        margin: 0 auto;
+        li a:hover {
+            color: $primary;
+        }
+    }
+}
