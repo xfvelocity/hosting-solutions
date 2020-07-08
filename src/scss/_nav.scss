@@ -48,9 +48,6 @@ nav {
             }
             .features {
                 cursor: pointer;
-                img {
-                    width: .6rem;
-                }
                 &:hover {
                     color: $primary;
                 }

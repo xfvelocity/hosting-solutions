@@ -3,6 +3,22 @@
 @import 'header';
 @import 'services';
 @import 'about';
+@import 'packages';
+@import 'faq';
+
+button {
+    margin-top: 15px;
+    background: $primary;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    &:hover {
+        opacity: .9;
+    }
+}
 
 svg {
     position: absolute;
