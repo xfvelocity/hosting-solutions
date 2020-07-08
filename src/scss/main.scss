@@ -1,10 +1,26 @@
-@import 'config';
-@import 'nav';
-@import 'header';
-@import 'services';
-@import 'about';
-@import 'packages';
-@import 'faq';
+$primary: #006572;
+$secondary: #3E3E3E;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: poppins, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
 
 button {
     margin-top: 15px;
@@ -19,6 +35,13 @@ button {
         opacity: .9;
     }
 }
+
+@import 'nav';
+@import 'header';
+@import 'services';
+@import 'about';
+@import 'packages';
+@import 'faq';
 
 svg {
     position: absolute;
@@ -45,4 +68,23 @@ main {
         background: url('../img/desktop-bg.svg') no-repeat;
         background-size: cover;
     }
+}
+
+@keyframes dotOneAnimate {
+    0% {transform: translate(0)}
+    33% {transform: translate(-60px, 40px)}
+    66% {transform: translate(60px, -20px)}
+    100% {transform: translate(0)}
+}
+@keyframes dotTwoAnimate {
+    0% {transform: translate(0)}
+    33% {transform: translate(-50px, -40px)}
+    66% {transform: translate(90px, -80px)}
+    100% {transform: translate(0)}
+}
+@keyframes dotThreeAnimate {
+    0% {transform: translate(0)}
+    33% {transform: translate(-50px, 40px)}
+    66% {transform: translate(90px, -80px)}
+    100% {transform: translate(0)}
 }
