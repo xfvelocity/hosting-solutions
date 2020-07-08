@@ -1,0 +1,31 @@
+.aboutContainer {
+    background: #F9F9F9;
+    padding: 30px 0;
+    .about {
+        width: 80%;
+        margin: 0 auto;
+        &-text {
+            h3 {
+                color: $primary;
+                font-size: 26px;
+            }
+            ul {
+                margin: 30px 0;
+                li {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        margin-right: 5px;
+                        width: 15px;
+                    }
+                }
+            }
+        }
+        &-img {
+            text-align: center;
+            img {
+                width: 80%;
+            }
+        }
+    }
+}

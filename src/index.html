@@ -9,65 +9,98 @@
 </head>
 <body>
     <nav>
-        <div class="navbar">
-            <div class="navbar-contents">
-                <h1>Hosting<span class="primary">Solutions</span></h1>
-                <img class="navbutton" src="img/icons/nav-button.svg" alt="">
+        <div class="nav">
+            <div class="navbar">
+                <div class="navbar-contents">
+                    <h1>Hosting<span class="primary">Solutions</span></h1>
+                    <img class="navbutton" src="img/icons/nav-button.svg" alt="">
+                </div>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li class="features">Features <img src="img/icons/down-arrow.svg" alt=""></li>
+                    <div class="dropdown">
+                        <ul>
+                            <li><a href="">Web Hosting</a></li>
+                            <li><a href="">SSL Certificates</a></li>
+                            <li><a href="">Domain Services</a></li>
+                            <li><a href="">Email Hosting</a></li>
+                        </ul>
+                    </div>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Blog</a></li>
+                    <!-- <li class="login"><a href="">Log In</a></li> -->
+                </ul>
             </div>
         </div>
-        <div class="nav-links">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li class="features">Features <img src="img/icons/down-arrow.svg" alt=""></li>
-                <div class="dropdown">
-                    <ul>
-                        <li><a href="">Web Hosting</a></li>
-                        <li><a href="">SSL Certificates</a></li>
-                        <li><a href="">Domain Services</a></li>
-                        <li><a href="">Email Hosting</a></li>
-                    </ul>
-                </div>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="">Blog</a></li>
-                <!-- <li class="login"><a href="">Log In</a></li> -->
-            </ul>
-        </div>
     </nav>
+    <main>
+        <svg width="1492" height="1355" viewBox="0 0 1492 1355" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="dots">
+                <rect width="1492" height="1355" fill="white"/>
+                <path id="dotOne" d="M226 209.5C226 219.165 233.835 227 243.5 227C253.165 227 261 219.165 261 209.5C261 199.835 253.165 192 243.5 192C233.835 192 226 199.835 226 209.5Z" fill="#006572" fill-opacity="0.1"/>
+                <path id="dotFour" d="M1282 1233.5C1282 1243.16 1289.84 1251 1299.5 1251C1309.16 1251 1317 1243.16 1317 1233.5C1317 1223.84 1309.16 1216 1299.5 1216C1289.84 1216 1282 1223.84 1282 1233.5Z" fill="#006572" fill-opacity="0.1"/>
+                <path id="dotFive" d="M226 1062.5C226 1072.16 233.835 1080 243.5 1080C253.165 1080 261 1072.16 261 1062.5C261 1052.84 253.165 1045 243.5 1045C233.835 1045 226 1052.84 226 1062.5Z" fill="#006572" fill-opacity="0.1"/>
+                <path id="dotTwo" d="M468 752.5C468 762.165 475.835 770 485.5 770C495.165 770 503 762.165 503 752.5C503 742.835 495.165 735 485.5 735C475.835 735 468 742.835 468 752.5Z" fill="#006572" fill-opacity="0.1"/>
+                <path id="dotThree" d="M1131 327.898C1131 337.563 1138.84 345.398 1148.5 345.398C1158.16 345.398 1166 337.563 1166 327.898C1166 318.233 1158.16 310.398 1148.5 310.398C1138.84 310.398 1131 318.233 1131 327.898Z" fill="#006572" fill-opacity="0.1"/>
+            </g>
+        </svg>
+        <header>       
+            <div class="header-contents">
+                <img src="img/header-img.png" alt="">
+                <div class="text">
+                    <h2>Hosting made <span class="header-animate"></span></h2>
+                    <p>Our Linux based website hosting guarantees lightning-fast loading speeds, unbeatable reliability and state-of-the-art security.</p>
+                    <a href="">
+                        <button>Learn More</button>
+                    </a>
+                </div>
+            </div>
+        </header>
 
-    <header>
-        <img src="img/header-img.png" alt="">
-        <div class="text">
-            <h2>Hosting made simple</h2>
-            <p>Our Linux based website hosting guarantees lightning-fast loading speeds, unbeatable reliability and state-of-the-art security.</p>
-            <a href="">
-                <button>Learn More</button>
-            </a>
+        <section class="serviceContainer">
+            <div class="services">
+                <div class="services-item">
+                    <img src="img/icons/rocket.svg" alt="">
+                    <h3>High Performance</h3>
+                    <p>Our cutting-edge cloud technology guarantees super-fast page loading speed for your website.</p>
+                </div>
+                <div class="services-item">
+                    <img src="img/icons/mail.svg" alt="">
+                    <h3>Email Services</h3>
+                    <p>Create an email address that matches your domain to give your business a professional look.</p>
+                </div>
+                <div class="services-item">
+                    <img src="img/icons/cloud.svg" alt="">
+                    <h3>Fully Redundant</h3>
+                    <p>Our cloud platform offers a 99.99% uptime guarantee to keep your services online.</p>
+                </div>
+                <div class="services-item">
+                    <img src="img/icons/shield.svg" alt="">
+                    <h3>Secure Infrastructure</h3>
+                    <p>All datacenters are Tier certified and provide advanced fire and intrusion protection.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section class="aboutContainer">
+        <div class="about">
+            <div class="about-text">
+                <h3>The Perfect Hosting Solution</h3>
+                <p>We use load balancing which means your website is hosted on multiple servers. If anything unexpected happens, we simply switch to another server so your site stays online.</p>
+                <ul>
+                    <li><img src="img/icons/blue-tick.svg"> Uptime 99.9%</li>
+                    <li><img src="img/icons/blue-tick.svg"> Secure 24/7</li>
+                    <li><img src="img/icons/blue-tick.svg"> Easy to use</li>
+                </ul>
+            </div>
+            <div class="about-img">
+                <img src="img/about-img.png" alt="">
+            </div>
         </div>
-    </header>
-
-    <div class="services">
-        <div class="services-item">
-            <img src="img/icons/rocket.svg" alt="">
-            <h3>High Performance</h3>
-            <p>Our cutting-edge cloud technology guarantees super-fast page loading speed for your website.</p>
-        </div>
-        <div class="services-item">
-            <img src="img/icons/mail.svg" alt="">
-            <h3>Email Services</h3>
-            <p>Create an email address that matches your domain to give your business a professional look.</p>
-        </div>
-        <div class="services-item">
-            <img src="img/icons/cloud.svg" alt="">
-            <h3>Fully Redundant</h3>
-            <p>Our cloud platform offers a 99.99% uptime guarantee to keep your services online.</p>
-        </div>
-        <div class="services-item">
-            <img src="img/icons/shield.svg" alt="">
-            <h3>Secure Infrastructure</h3>
-            <p>All datacenters are Tier certified and provide advanced fire and intrusion protection.</p>
-        </div>
-    </div>
+    </section>
     
     <script src="js/script.js"></script>
 </body>

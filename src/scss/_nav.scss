@@ -1,5 +1,8 @@
 nav {
     width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 99;
     .navbar {
         padding: 15px 0;
         &-contents {
@@ -92,16 +95,19 @@ nav {
         }
     }
 
-    .nav-links-open {
-        display: block;
+    @media(min-width: 768px) {
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1000px;
+        }
     }
 
-    @media(min-width: 768px) {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        width: 80%;
-        margin: 0 auto;
+    .nav-links-open {
+        display: block;
     }
 }

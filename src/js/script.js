@@ -11,6 +11,48 @@ navButton.addEventListener('click', () => {
     } 
 })
 
+let t = 0;
+const headerText = document.querySelector('.header-animate');
+let programRan = false;
+
+const typeWriter = type => {
+  if (t < type.length) {
+    headerText.innerHTML += type.charAt(t);
+    t++;
+    setTimeout(typeWriter, 80, type);
+  }
+};
+
+typeWriter('simple')
+
+const children = document.querySelectorAll('section');
+let options = {
+  threshold: 0.5
+};
+const services = document.querySelector('.services');
+
+let observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      if(entry.target.classList.contains('serviceContainer')) {
+        console.log('boop');
+        services.style.display = 'flex';
+      }
+    }
+  })
+}, options)
+
+children.forEach(child => {
+  observer.observe(child)
+})
+
+
+
+
+
+
+
+
 // const dropdownButton = document.querySelector('.features');
 // const dropdown = document.querySelector('.dropdown');
 // let dropPressed;
