@@ -1,5 +1,6 @@
 $primary: #006572;
 $secondary: #3E3E3E;
+$bright-primary: #00FFF0;
 
 * {
     box-sizing: border-box;
@@ -47,6 +48,7 @@ button {
 @import 'packages';
 @import 'faq';
 @import 'reviews';
+@import 'footer';
 
 svg {
     position: absolute;
