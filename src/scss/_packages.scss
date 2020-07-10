@@ -1,13 +1,15 @@
 .packagesContainer {
-    width: 80%;
+    width: 85%;
     margin: 70px auto;
     .packages-title {
         text-align: center;
-        h3, p {
-            margin: 5px 0;
-        }
         h3 {
+            margin: 5px 0;
             font-size: 24px;
+        }
+        p {
+            max-width: 400px;
+            margin: 5px auto;
         }
     }
     .packages {
@@ -17,7 +19,7 @@
             border: 1px solid #e0e0e0;
             border-radius: 10px;
             padding: 30px 45px;
-            width: 80%;
+            width: 90%;
             margin: 20px auto;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
             max-width: 310px;
@@ -70,6 +72,14 @@
             }
             .ultimate {
                 max-width: 350px;
+            }
+        }
+    }
+    @media(min-width: 1200px) {
+        margin-bottom: 200px;
+        .packages-title {
+            h3 {
+                font-size: 30px;
             }
         }
     }

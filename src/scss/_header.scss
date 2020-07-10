@@ -7,14 +7,14 @@ header {
     .header-contents {
         width: 85%;
         margin: 0 auto;
-        max-width: 1000px;
+        max-width: 1200px;
         img {
             width: 100%;
         }
         .text {
-            margin-top: 60px;
+            margin-top: 80px;
             h2 {
-                font-size: 1.5rem;
+                font-size: 24px;
                 text-transform: uppercase;
                 color: $secondary;
                 margin: 0;
@@ -29,7 +29,6 @@ header {
                 border: none;
                 border-radius: 5px;
                 padding: 12px 17px;
-                font-size: 14px;
                 color: white;
                 cursor: pointer;
                 &:hover {
@@ -42,7 +41,7 @@ header {
         }
     }
     @media(min-width: 768px) {
-        height: 90vh;
+        height: 95vh;
         .header-contents {
             display: flex;
             align-items: center;
@@ -52,13 +51,33 @@ header {
             img {
                 order: 2;
                 width: 50%;
+                max-width: 500px;
             }
             .text {
+                max-width: 450px;
+                h2 {
+                    font-size: 30px;
+                }
                 p {
-                    width: 70%;
+                    width: 80%;
+                    padding: 20px 0;
+                }
+            }
+        }
+    }
+    @media(min-width: 1200px) {
+        .header-contents {
+            .text {
+                margin-right: 100px;
+                h2 {
+                    font-size: 38px;
+                }
+                p {
+                    font-size: 18px;
+                    width: 90%;
                 }
                 button {
-                    margin-top: 30px;
+                    font-size: 18px;
                 }
             }
         }

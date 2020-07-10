@@ -4,7 +4,7 @@ nav {
     top: 0;
     z-index: 99;
     .navbar {
-        padding: 15px 0;
+        padding: 25px 0;
         &-contents {
             width: 85%;
             margin: 0 auto;
@@ -31,6 +31,11 @@ nav {
                     display: none;
                 }
             }
+            @media(min-width: 1200px) {
+                h1 {
+                    font-size: 1.8rem;
+                }
+            }
         }
     }
 
@@ -42,7 +47,7 @@ nav {
         width: 100%;
         ul {
             line-height: 2.5;
-            width: 80%;
+            width: 85%;
             margin: 0 auto;
             li {
                 padding-left: 5px;
@@ -77,6 +82,7 @@ nav {
                 line-height: 1.5;
                 li {
                     margin: 0 7px;
+                    border: none;
                 }
                 .login {
                     background: $primary;
@@ -95,6 +101,11 @@ nav {
                 }
             }
         }
+        @media(min-width: 1200px) {
+            ul li {
+                font-size: 18px;
+            }
+        }
     }
 
     @media(min-width: 768px) {
@@ -104,8 +115,8 @@ nav {
             align-items: center;
             justify-content: space-between;
             width: 80%;
+            max-width: 1200px;
             margin: 0 auto;
-            max-width: 1000px;
         }
     }
 
