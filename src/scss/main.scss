@@ -56,11 +56,19 @@ svg {
     z-index: -10;
 
     #dotOne,
-    #dotThree {
-        animation: 40s ease-out dotOneAnimate infinite;
-    }
     #dotTwo {
-        animation: 40s ease-out dotTwoAnimate infinite;
+        transform-origin: 300px 300px;
+        animation: 500s ease-out dotOneAnimate infinite;
+    }
+
+    #dotThree {
+        transform-origin: 800px;
+        animation: 500s ease-out dotThreeAnimate infinite;
+    }
+
+    #dotFour {
+        transform-origin: 1200px;
+        animation: 500s ease-out dotFourAnimate infinite;
     }
 }
 
@@ -78,20 +86,19 @@ main {
 }
 
 @keyframes dotOneAnimate {
-    0% {transform: translate(0)}
-    33% {transform: translate(-60px, 40px)}
-    66% {transform: translate(60px, -20px)}
-    100% {transform: translate(0)}
+    100% {
+        transform: rotate(360deg);
+    }
 }
-@keyframes dotTwoAnimate {
-    0% {transform: translate(0)}
-    33% {transform: translate(-50px, -40px)}
-    66% {transform: translate(90px, -80px)}
-    100% {transform: translate(0)}
-}
+
 @keyframes dotThreeAnimate {
-    0% {transform: translate(0)}
-    33% {transform: translate(-50px, 40px)}
-    66% {transform: translate(90px, -80px)}
-    100% {transform: translate(0)}
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes dotFourAnimate {
+    100% {
+        transform: rotate(360deg);
+    }
 }

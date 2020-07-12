@@ -54,6 +54,7 @@
             }
         }
         .ultimate {
+            z-index: 99;
             background: white;
             padding: 45px;
         }
@@ -72,6 +73,7 @@
             }
             .ultimate {
                 max-width: 350px;
+                margin: -20px;
             }
         }
     }

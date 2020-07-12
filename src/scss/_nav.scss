@@ -83,6 +83,7 @@ nav {
                 li {
                     margin: 0 7px;
                     border: none;
+                    padding: 0;
                 }
                 .login {
                     background: $primary;
@@ -124,3 +125,32 @@ nav {
         display: block;
     }
 }
+
+.versions {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    background: gold;
+    margin-left: 15px;
+    border-radius: 10px;
+    &-dropdown {
+        display: none;
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            position: absolute;
+            li {
+                padding-top: 10px;
+            }
+        }
+    }
+    &:hover .versions-dropdown {
+        display: block;
+    }
+    @media(min-width: 768px) {
+        display: block;
+    }
+}
+
+
