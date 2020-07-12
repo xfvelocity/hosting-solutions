@@ -1,6 +1,10 @@
 .packagesContainer {
-    width: 85%;
-    margin: 70px auto;
+    width: 100%;
+    background: url('../img/package-bg.svg') no-repeat right;
+    .packagesWrap {
+        width: 85%;
+        margin: 90px auto;
+    }
     .packages-title {
         text-align: center;
         h3 {
@@ -60,8 +64,10 @@
         }
     }
     @media(min-width: 900px) {
-        width: 90%;
-        margin: 90px auto;
+        .packagesWrap {
+            width: 90%;
+            margin: 140px auto;
+        }
         .packages {
             display: flex;
             align-items: center;
