@@ -140,13 +140,17 @@ nav {
             flex-wrap: wrap;
             flex-direction: column;
             position: absolute;
+            margin-top: 5px;
             li {
-                padding-top: 10px;
+                line-height: 2;
             }
         }
     }
-    &:hover .versions-dropdown {
-        display: block;
+    &:hover {
+        color: $primary;
+        .versions-dropdown {
+            display: block;
+        }
     }
     @media(min-width: 768px) {
         display: block;
