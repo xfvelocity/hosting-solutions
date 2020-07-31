@@ -1,0 +1,26 @@
+.blog-list {
+    width: 80%;
+    margin: 60px auto;
+    .blog-item {
+        width: 90%;
+        margin: 10px auto;
+        padding: 20px 0;
+        img {
+            width: 100%;
+        }
+        &-text {
+            margin: 15px 0;
+            h3 {
+                margin: 0 0 10px 0;
+                font-size: 24px;
+                color: $primary;
+            }
+            p {
+                margin: 0;
+            }
+            .date {
+                font-size: 14px;
+            }
+        }
+    }
+}

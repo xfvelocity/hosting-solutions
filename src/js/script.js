@@ -23,28 +23,43 @@ const typeWriter = type => {
   }
 };
 
-typeWriter('simple')
+typeWriter('simple');
 
-const children = document.querySelectorAll('section');
-let options = {
-  threshold: 0.5
-};
-const services = document.querySelector('.services');
+const faqArr = [
+  {
+    question: [ 'What is web hosting?'],
+    answer: ['Boop']
+  }
+]
 
-let observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting) {
-      if(entry.target.classList.contains('serviceContainer')) {
-        console.log('boop');
-        services.style.display = 'flex';
-      }
-    }
+const faqQuestions = document.querySelectorAll('.faq-question');
+
+faqQuestions.forEach(question => {
+  question.addEventListener('click', e => {
+    console.log(e.target.parentNode);
   })
-}, options)
-
-children.forEach(child => {
-  observer.observe(child)
 })
+
+// const children = document.querySelectorAll('section');
+// let options = {
+//   threshold: 0.5
+// };
+// const services = document.querySelector('.services');
+
+// let observer = new IntersectionObserver((entries, observer) => {
+//   entries.forEach(entry => {
+//     if(entry.isIntersecting) {
+//       if(entry.target.classList.contains('serviceContainer')) {
+//         console.log('boop');
+//         services.style.display = 'flex';
+//       }
+//     }
+//   })
+// }, options)
+
+// children.forEach(child => {
+//   observer.observe(child)
+// })
 
 
 

@@ -21,6 +21,9 @@ ul {
 a {
     color: black;
     text-decoration: none;
+    &:hover {
+        opacity: .75;
+    }
 }
 
 button {
@@ -42,13 +45,17 @@ button {
 }
 
 @import 'nav';
-@import 'header';
-@import 'services';
-@import 'about';
-@import 'packages';
-@import 'faq';
-@import 'reviews';
 @import 'footer';
+
+@import 'homepage/header';
+@import 'homepage/services';
+@import 'homepage/about';
+@import 'homepage/packages';
+@import 'homepage/faq';
+@import 'homepage/reviews';
+
+@import 'blog/blogheader';
+@import 'blog/bloglist';
 
 svg {
     position: absolute;
