@@ -25,6 +25,7 @@ const typeWriter = type => {
 
 typeWriter('simple');
 
+/*
 const faqArr = [
   {
     question: [ 'What is web hosting?'],
@@ -39,44 +40,42 @@ faqQuestions.forEach(question => {
     console.log(e.target.parentNode);
   })
 })
+*/
 
-// const children = document.querySelectorAll('section');
-// let options = {
-//   threshold: 0.5
-// };
-// const services = document.querySelector('.services');
+/*
+const children = document.querySelectorAll('section');
+let options = {
+  threshold: 0.5
+};
+const services = document.querySelector('.services');
 
-// let observer = new IntersectionObserver((entries, observer) => {
-//   entries.forEach(entry => {
-//     if(entry.isIntersecting) {
-//       if(entry.target.classList.contains('serviceContainer')) {
-//         console.log('boop');
-//         services.style.display = 'flex';
-//       }
-//     }
-//   })
-// }, options)
+let observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      if(entry.target.classList.contains('serviceContainer')) {
+        console.log('boop');
+        services.style.display = 'flex';
+      }
+    }
+  })
+}, options)
 
-// children.forEach(child => {
-//   observer.observe(child)
-// })
+children.forEach(child => {
+  observer.observe(child)
+})
+*/
 
+/*
+const dropdownButton = document.querySelector('.features');
+const dropdown = document.querySelector('.dropdown');
+let dropPressed;
 
+dropdownButton.addEventListener('click', () => {
+    dropPressed = !dropPressed;
+    dropdown.classList.remove('drop-pressed');
 
-
-
-
-
-
-// const dropdownButton = document.querySelector('.features');
-// const dropdown = document.querySelector('.dropdown');
-// let dropPressed;
-
-// dropdownButton.addEventListener('click', () => {
-//     dropPressed = !dropPressed;
-//     dropdown.classList.remove('drop-pressed');
-
-//     if(dropPressed) {
-//         dropdown.classList.toggle('drop-pressed');
-//     } 
-// })
+    if(dropPressed) {
+        dropdown.classList.toggle('drop-pressed');
+    } 
+})
+*/

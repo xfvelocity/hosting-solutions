@@ -3,6 +3,7 @@
     margin: 60px auto;
     display: flex;
     flex-wrap: wrap;
+    max-width: 780px;
     .blog-item {
         width: 90%;
         margin: 10px auto;
@@ -19,11 +20,20 @@
                 color: $primary;
             }
             p {
-                margin: 0;
-            }
-            .date {
+                margin: 10px 0 15px;
                 font-size: 14px;
             }
+            .date {
+                margin: 0;
+                font-size: 12px;
+            }
+        }
+    }
+    @media(min-width: 1380px) {
+        max-width: 1250px;
+        margin: 60px auto 100px auto;
+        .blog-item {
+            margin: 20px auto;
         }
     }
 }
