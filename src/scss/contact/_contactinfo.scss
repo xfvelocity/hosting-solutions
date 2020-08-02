@@ -1,11 +1,12 @@
 .contact-block {
-    background: rgb(240, 240, 240);
+    padding: 100px 0;
+    background: rgb(250, 250, 250);
     border-bottom: 1px solid rgb(207, 207, 207);
     z-index: 10;
 }
 .contact-info {
     margin: 0 auto;
-    padding: 50px 0 20px 0;
+    padding-bottom: 40px;
     width: 80%;
     h3 {
         color: $primary;
