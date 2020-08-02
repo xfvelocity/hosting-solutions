@@ -1,0 +1,27 @@
+.contact-info {
+    margin: 50px auto;
+    width: 80%;
+    h3 {
+        color: $primary;
+        margin: 0;
+        font-size: 22px;
+    }
+    p {
+        margin: 10px 0;
+    }
+    &-links {
+        margin: 20px 0;
+        a {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+            img {
+                width: 20px;
+                margin-right: 10px;
+            }
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+}
