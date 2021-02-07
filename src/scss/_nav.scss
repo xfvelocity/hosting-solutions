@@ -166,9 +166,9 @@ nav {
 
 .disabled,
 .disabled a {
-  color: grey  !important;
+  color: grey !important;
   cursor: default !important;
   &:hover {
-      opacity: 1;
+    opacity: 1;
   }
 }
