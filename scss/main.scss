@@ -25,6 +25,7 @@ ul {
 a {
   color: black;
   text-decoration: none;
+
   &:hover {
     opacity: 0.75;
   }
@@ -39,6 +40,7 @@ button {
   font-size: 16px;
   color: white;
   cursor: pointer;
+
   &:hover {
     opacity: 0.9;
   }
@@ -88,10 +90,12 @@ svg {
 main {
   background: url("../img/mobile-bg.svg") no-repeat center;
   background-size: cover;
+
   @media (min-width: 768px) {
     background: url("../img/tablet-bg.svg") no-repeat;
     background-size: cover;
   }
+
   @media (min-width: 1100px) {
     background: url("../img/desktop-bg.svg") no-repeat;
     background-size: cover;

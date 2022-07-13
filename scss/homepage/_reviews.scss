@@ -2,6 +2,7 @@
   background: url("../img/reviews-bg.png") no-repeat center;
   background-size: cover;
   padding: 60px 0;
+
   .review {
     background: white;
     border-radius: 10px;
@@ -11,34 +12,41 @@
     margin: 10px auto;
     padding: 15px 0;
     max-width: 300px;
+
     &-contents {
       width: 80%;
       margin: 0 auto;
       font-size: 18px;
+
       .review-user {
         font-size: 12px;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
         margin: 25px 0;
+
         p {
           margin: 0;
         }
+
         .name {
           font-size: 14px;
           font-weight: bold;
         }
+
         img {
           width: 45px;
           margin-right: 10px;
         }
       }
+
       .primary {
         font-weight: bold;
         font-size: 20px;
       }
     }
   }
+
   @media (min-width: 768px) {
     display: flex;
     justify-content: center;
@@ -50,6 +58,7 @@
       height: 340px;
     }
   }
+
   @media (min-width: 950px) {
     margin-top: 220px;
     .review {
